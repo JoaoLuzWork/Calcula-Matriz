@@ -1,0 +1,36 @@
+:root{
+    --casa: dark();
+}
+
+*{
+    margin: 0;
+    
+}
+
+/* Header */
+.nav{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    justify-content: space-around;
+    z-index: 2;
+}
+/* Main */
+.container{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+/* Geral buttons */
+.buttons{
+    margin: 0%;
+    padding: 0%;
+    width: 300px;
+    height: 700px;
+}
+/* Casa */
+
+
