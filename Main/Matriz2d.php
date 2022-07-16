@@ -15,7 +15,6 @@
 
         }
 
-
         public function CalcularMatriz2d()
         {
             return $this->a1 * $this->b2 - $this->a2 * $this-> b1;
@@ -80,7 +79,6 @@
 
                 return $this;
         }
-
 
         /**
          * Get the value of b2
