@@ -31,20 +31,21 @@
             $m1 = new Matriz2d($this->a1, $this->a2, $this->b1, $this->b2);
             $delt = $m1->CalcularMatriz2d();
             
-            $m2 = new Matriz2d($this->d1, $this->d2, $this->b1, $this->b2);
-            $deltX = $m2->CalcularMatriz2d();
-            $this->x = $deltX/$delt;
-
-            $m3 = new Matriz2d($this->a1, $this->a2, $this->d1, $this->d2);
-            $deltY = $m3->CalcularMatriz2d();
-            $this->y = $deltY/$delt;
-
-            if ($delt == 0) {
+            if ($delt == 0) 
+            {
                 $this-> determinado = false;
-            } else{
+            } 
+            else
+            {
                 $this-> determinado = true;
+                $m2 = new Matriz2d($this->d1, $this->d2, $this->b1, $this->b2);
+                $deltX = $m2->CalcularMatriz2d();
+                $this->x = $deltX/$delt;
+
+                $m3 = new Matriz2d($this->a1, $this->a2, $this->d1, $this->d2);
+                $deltY = $m3->CalcularMatriz2d();
+                $this->y = $deltY/$delt;
             }
-        
         }
 
        

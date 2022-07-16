@@ -17,7 +17,6 @@
         private $x;
         private $y;
         private $z;
-        private $delt;
         private $determinado;
 
        
@@ -43,26 +42,24 @@
         {
             
             $m1 = new Matriz3d($this->a1, $this->a2, $this->a3, $this->b1, $this->b2, $this->b3, $this->c1,$this->c2,$this->c3);
-            $this->delt = $m1->CalcularMatriz3d();
+            $delt = $m1->CalcularMatriz3d();
             
-            $m2 = new Matriz3d($this->d1, $this->d2, $this->d3, $this->b1, $this->b2, $this->b3, $this->c1,$this->c2,$this->c3);
-            $deltX = $m2->CalcularMatriz3d();
-            $this->x = $deltX/$this->delt;
-
-            $m3 = new Matriz3d($this->a1, $this->a2, $this->a3, $this->d1, $this->d2, $this->d3, $this->c1,$this->c2,$this->c3);
-            $deltY = $m3->CalcularMatriz3d();
-            $this->y = $deltY/$this->delt;
-
-            $m4 = new Matriz3d($this->a1, $this->a2, $this->a3, $this->b1, $this->b2, $this->b3, $this->d1, $this->d2, $this->d3);
-            $deltZ = $m4->CalcularMatriz3d();
-            $this->z = $deltZ/$this->delt;
-
-            if ($this->delt == 0) {
+            if ($delt == 0) {
                 $this-> determinado = false;
             } else{
                 $this-> determinado = true;
+                $m2 = new Matriz3d($this->d1, $this->d2, $this->d3, $this->b1, $this->b2, $this->b3, $this->c1,$this->c2,$this->c3);
+                $deltX = $m2->CalcularMatriz3d();
+                $this->x = $deltX/$delt;
+    
+                $m3 = new Matriz3d($this->a1, $this->a2, $this->a3, $this->d1, $this->d2, $this->d3, $this->c1,$this->c2,$this->c3);
+                $deltY = $m3->CalcularMatriz3d();
+                $this->y = $deltY/$delt;
+    
+                $m4 = new Matriz3d($this->a1, $this->a2, $this->a3, $this->b1, $this->b2, $this->b3, $this->d1, $this->d2, $this->d3);
+                $deltZ = $m4->CalcularMatriz3d();
+                $this->z = $deltZ/$delt;
             }
-        
         }
 
       
@@ -339,12 +336,5 @@
                 return $this->determinado;
         }
 
-        /**
-         * Get the value of delt
-         */ 
-        public function getDelt()
-        {
-                return $this->delt;
-        }
     }
-    ?>
+  
