@@ -19,8 +19,6 @@
         private $z;
         private $determinado;
 
-       
-       
         public function __construct($a1, $a2, $a3, $b1, $b2, $b3, $c1, $c2, $c3, $d1, $d2, $d3)
         {
             $this->a1 = $a1;
@@ -36,7 +34,6 @@
             $this->d2 = $d2;
             $this->d3 = $d3;
         }
-
 
         public function Calcula()
         {
@@ -61,8 +58,6 @@
                 $this->z = $deltZ/$delt;
             }
         }
-
-      
 
         /**
          * Get the value of a1
