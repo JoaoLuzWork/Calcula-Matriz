@@ -25,7 +25,6 @@
             $this->c3 = $c3;
         }
 
-
         public function CalcularMatriz3d()
         {
             return ((($this->a1 * $this->b2 * $this->c3) + ($this->b1 * $this->c2 * $this->a3) + ($this->c1 * $this->a2 * $this->b3))) - ((($this->c1 * $this->b2 * $this->a3) + ($this->a1 * $this->c2 * $this->b3) + ($this->b1 * $this->a2 * $this->c3)));

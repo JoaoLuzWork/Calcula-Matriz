@@ -12,6 +12,8 @@
         private $y;
         private $determinado;
 
+       
+       
         public function __construct($a1, $a2, $b1, $b2, $d1, $d2)
         {
             $this->a1 = $a1;

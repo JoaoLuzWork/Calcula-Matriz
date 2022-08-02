@@ -1,9 +1,9 @@
 <?php
 
-    require_once __DIR__ . '/vendor/autoload.php';
+    require_once __DIR__ . '/../vendor/autoload.php';
     require_once "Cramer2x2.php";
 
-    $loader = new \Twig\Loader\FilesystemLoader('./views/');
+    $loader = new \Twig\Loader\FilesystemLoader('../views/');
     $twig = new \Twig\Environment($loader);
     
     $calc = new Cramer2x2($_GET["x1"], $_GET["x2"],$_GET["y1"], $_GET["y2"], $_GET["resultado1"],$_GET["resultado2"]);
